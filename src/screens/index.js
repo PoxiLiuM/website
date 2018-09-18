@@ -1,5 +1,7 @@
 import React from 'react';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
+import Home from './Home';
 import './general.scss';
 
 class Screens extends React.Component{
@@ -9,9 +11,12 @@ class Screens extends React.Component{
 
   render(){
     return(
-      <div>
-
-      </div>
+      <BrowserRouter>
+        <Switch>
+          <Route exact path="/home" component={Home} />
+          <Route exact path="/" component={Home} />
+        </Switch>
+      </BrowserRouter>
     );
   }
 }
