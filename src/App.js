@@ -18,7 +18,7 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-        <I18n translations={translations}>
+        <I18n translations={translations} initialLang="fr" fallbackLang="en">
           <Screens />
         </I18n>
       </Provider>
