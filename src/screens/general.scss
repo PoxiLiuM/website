@@ -21,9 +21,11 @@ a{
 
 .basic-button{
   text-decoration: none;
-  padding: 10px 15px;
   background: rgb(28, 107, 177);
   text-transform: uppercase;
+  padding: 12px 15px;
+  border-radius: 5px;
+  box-sizing: border-box;
 }
 
 @media all and (max-width: 800px){
