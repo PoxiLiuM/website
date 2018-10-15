@@ -1,0 +1,29 @@
+.screen{
+  .bottombar{
+    position: absolute;
+    bottom: 5px;
+    color: white;
+    font-size: 13px;
+    text-align: center;
+    width: 110px !important;
+    margin-left: calc(50% - 55px);
+    min-height: 12px;
+    cursor: pointer;
+    p{
+      opacity: 0;
+      width: 110px;
+      margin: auto;
+      margin-bottom: 10px;
+      transition: 1500ms;
+    }
+    > div{
+      height: 3px;
+      width: 80px !important;
+      border-radius: 2px;
+      background: white;
+      margin: auto;
+      transition: 1500ms;
+
+    }
+  }
+}

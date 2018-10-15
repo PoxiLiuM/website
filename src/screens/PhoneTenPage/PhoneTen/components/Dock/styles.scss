@@ -1,0 +1,12 @@
+.screen{
+  .dock{
+    height: 55px;
+    width: calc(100% - 20px) !important;
+    margin: 10px;
+    box-sizing: border-box;
+    border-radius: 18px;
+    background: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 0px;
+  }
+}

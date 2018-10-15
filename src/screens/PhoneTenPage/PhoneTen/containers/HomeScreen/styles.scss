@@ -1,0 +1,12 @@
+.screen{
+  .homescreen{
+    background-image: url('../../images/fond-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    top: 0;
+    transition: 500ms;
+    z-index: 200;
+    height: 100%;
+  }
+}

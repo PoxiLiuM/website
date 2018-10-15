@@ -1,20 +1,20 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import Home from './Home';
+import Depannmoi from './Depannmoi';
+import TestBackend from './TestBackend';
+import PhoneTenPage from './PhoneTenPage';
 import './general.scss';
 
 class Screens extends React.Component{
-  constructor(props){
-    super(props);
-  }
 
   render(){
     return(
       <BrowserRouter>
         <Switch>
-          <Route exact path="/home" component={Home} />
-          <Route exact path="/" component={Home} />
+          <Route exact path="/depannmoi" component={Depannmoi} />
+          <Route exact path="/testbackend" component={TestBackend} />
+          <Route exact path="/" component={PhoneTenPage} />
         </Switch>
       </BrowserRouter>
     );

@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+// import $ from 'jquery';
 
 import NavBar from '../../common/components/basics/NavBar';
 import Banner from '../../common/components/Banner';
@@ -12,9 +13,6 @@ import Footer from '../../common/components/basics/Footer';
 import './styles.scss';
 
 class Home extends React.Component{
-  constructor(props){
-    super(props);
-  }
 
   render(){
     return(
