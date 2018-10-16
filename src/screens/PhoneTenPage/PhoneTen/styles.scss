@@ -16,7 +16,6 @@
     align-items: center;
     // overflow: hidden;
     position: relative;
-
     .reseau{
       height: 3px;
       width: 100%;
@@ -28,6 +27,17 @@
     }
     .reseau:nth-child(1){
       top: 40px;
+    }
+    .powerbutton{
+      transition: 500ms;
+      height: 60px;
+      background: #303030;
+      width: 3px;
+      border-radius: 2px;
+      position: absolute;
+      right: -6px;
+      cursor: pointer;
+      top: 115px;
     }
 
     .notch::before{

@@ -14,10 +14,11 @@ class PhoneTen extends React.Component{
     super(props);
     this.state = {
       darkUI: false,
-      displayOn : true,
       appID : -1,
+      displayOn : true,
       notificationCenter : true,
       lockScreen : true,
+      overPowerButton: false,
       date : {
         minute : date.getMinutes(),
         heure : date.getHours(),
@@ -64,7 +65,7 @@ class PhoneTen extends React.Component{
           />
           <HomeScreen
             allData={this.state}
-            goToNotificationCenter={() => this.setState({notificationCenter : true})}
+            goToNotificationCenter={() => this.setState({notificationCenter : true, lockScreen: false})}
           />
         </div>
       );
@@ -77,6 +78,12 @@ class PhoneTen extends React.Component{
       <div id="phoneten" style={{background: this.state.darkUI ? '#404040' : '#BBB'}}>
         <div className="chassis">
           <div className="reseau"></div>
+          <div className="powerbutton"
+            style={{width: this.state.overPowerButton? '6px': '3px', right: this.state.overPowerButton ? '-8px' : '-5px'}}
+            onMouseOver={() => this.setState({overPowerButton: true})}
+            onMouseLeave={() => this.setState({overPowerButton: false})}
+            onClick={() => this.setState({displayOn : !this.state.displayOn, notificationCenter : true, lockScreen : true,})}
+          ></div>
           <div className="notch">
             <div className="speaker"></div>
           </div>

@@ -14,7 +14,10 @@ class TopBar extends React.Component{
   render(){
     return(
       <div className={_.get(this.props, 'isWhite', true) ? "top-bar" : "top-bar black"}>
-        <span onClick={() => this.props.goToNC()}>
+        <span
+          onClick={() => !this.props.notificationCenter ? this.props.goToNC() : ''}
+          style={{cursor: !this.props.notificationCenter ? 'pointer' : 'initial', fontSize: !this.props.notificationCenter? '11px': '10px'}}
+        >
           {this.props.notificationCenter ? 'ASP' : this.getHours(this.props.date)}
         </span>
         <span></span>
