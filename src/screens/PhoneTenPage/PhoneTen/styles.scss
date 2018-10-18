@@ -1,13 +1,17 @@
 #phoneten{
-  height: 100vh;
+  height: 100%;
   width: 100%;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   transition: 500ms;
+  min-height: 568px;
   .chassis{
     width: 270px;
     height: 542px;
+    min-width: 270px;
+    min-height: 542px;
     background: black;
     border: 4px solid #303030;
     border-radius: 36px;
@@ -103,7 +107,7 @@
       justify-content: center;
       z-index: 200;
       overflow: hidden;
-      div{
+      > div{
         width: 100%;
       }
     }

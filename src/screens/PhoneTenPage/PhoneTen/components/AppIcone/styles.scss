@@ -1,0 +1,49 @@
+.screen{
+  .appicone{
+    height: 36px;
+    width: 36px !important;
+    border-radius: 8px;
+    background: white;
+    cursor: pointer;
+    box-sizing: border-box;
+    position: relative;
+    overflow: visible;
+    div {
+      position: absolute;
+      bottom : -13px;
+      font-size: 10px;
+      text-align: center;
+      width: 100%;
+      color: white;
+    }
+  }
+  .bg-green{
+    background: linear-gradient(rgb(90, 247, 119), rgb(15, 189, 42));
+    color: #FFF;
+  }
+  .bg-blue{
+    background: linear-gradient(rgb(29, 112, 240), rgb(27, 201, 255));
+    color: #FFF;
+    font-size: 1.5em;
+  }
+  .bg-black{
+    background: linear-gradient(rgb(50, 50, 50), rgb(10, 10, 10));
+    color: #FFF;
+  }
+  .bg-white{
+    background: #FFF;
+    color: rgb(27, 154, 246);
+  }
+  .bg-grey{
+    background: linear-gradient(rgb(226, 225, 230), rgb(143, 144, 149));
+    color: rgb(47, 46, 47);
+  }
+  .bg-orange{
+    background: linear-gradient(rgb(254, 156, 7), rgb(249, 114, 34));
+    color: #FFF;
+  }
+  .bg-red{
+    background: linear-gradient(rgb(255, 49, 99), rgb(255, 87, 57));
+    color: #FFF;
+  }
+}

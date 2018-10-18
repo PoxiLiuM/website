@@ -13,7 +13,7 @@ class TopBar extends React.Component{
 
   render(){
     return(
-      <div className={_.get(this.props, 'isWhite', true) ? "top-bar" : "top-bar black"}>
+      <div className={_.get(this.props, 'dark', false) ? "top-bar black" : "top-bar"}>
         <span
           onClick={() => !this.props.notificationCenter ? this.props.goToNC() : ''}
           style={{cursor: !this.props.notificationCenter ? 'pointer' : 'initial', fontSize: !this.props.notificationCenter? '11px': '10px'}}

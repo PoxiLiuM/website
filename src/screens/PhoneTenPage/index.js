@@ -9,14 +9,14 @@ class PhoneTenPage extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      data : undefined
+      version : "0.2.2"
     }
   }
 
   render(){
     return(
       <div id="phonetenpage">
-        <PhoneTen/>
+        <PhoneTen version={this.state.version}/>
       </div>
     );
   }

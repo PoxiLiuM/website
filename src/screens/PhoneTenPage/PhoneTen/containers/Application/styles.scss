@@ -1,0 +1,25 @@
+$blue: rgb(21, 126, 250);
+$lightgrey : #FAFAFA;
+$border : 1px solid #EEE;
+
+.screen{
+  .application{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    z-index: 220;
+    transition: 300ms;
+    border-radius: 25px;
+    background: white;
+    .footer{
+      position: absolute;
+      height: 50px;
+      width: 100%;
+      background: $lightgrey;
+      border-top: $border;
+      box-sizing: border-box;
+      bottom: 0;
+    }
+  }
+}

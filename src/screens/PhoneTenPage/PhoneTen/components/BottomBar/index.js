@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 import './styles.scss';
 
@@ -30,8 +31,8 @@ class BottomBar extends React.Component{
       );
     }
     return (
-      <div className="bottombar" onClick={() => this.props.onClickBottomBar()}>
-        <div style={{position: 'absolute', bottom: 0, marginLeft: '15px'}}></div>
+      <div className="bottombar" onClick={() => this.props.onClickBottomBar()} >
+        <div style={{position: 'absolute', bottom: 0, marginLeft: '15px', background: _.get(this.props, 'dark', false) ? '#303030' : 'white'}}></div>
       </div>
     )
   }

@@ -5,6 +5,7 @@ import './styles.scss';
 
 import LookScreen from './containers/LookScreen';
 import HomeScreen from './containers/HomeScreen';
+import Application from './containers/Application';
 
 let date = new Date();
 
@@ -15,6 +16,7 @@ class PhoneTen extends React.Component{
     this.state = {
       darkUI: false,
       appID : -1,
+      showAppContent : false,
       displayOn : true,
       notificationCenter : true,
       lockScreen : true,
@@ -29,8 +31,8 @@ class PhoneTen extends React.Component{
     }
   }
 
-  componentWillReceiveProps(nextProps){
-    // this.updateDate();
+  componentDidMount(){
+    this.updateDate();
   }
 
   updateDate = () => {
@@ -38,7 +40,7 @@ class PhoneTen extends React.Component{
     setInterval(() => {
       newdate = new Date();
       if(newdate.getMinutes() > this.state.date.minute){
-        console.log("this.state.date", this.state.date);
+        // console.log("this.state.date", this.state.date);
         this.setState({
           date : {
             minute : newdate.getMinutes(),
@@ -53,20 +55,29 @@ class PhoneTen extends React.Component{
   }
 
   displayContent =() => {
-    this.updateDate();
     if(this.state.displayOn){
       return(
         <div>
           <LookScreen
             allData={this.state}
             torcheAction={() => this.setState({darkUI: !this.state.darkUI})}
-            photoAction={() => console.log("PHOTO")}
+            photoAction={() => console.error("This button is not working...")}
             onClickBottomBar={() => this.setState({notificationCenter: false, lockScreen: false})}
+          />
+          <Application
+            allData={this.state}
+            goToNotificationCenter={() => this.setState({notificationCenter : true, lockScreen: false})}
+            closeApp={() => this.setState({appID : -1, showAppContent: false})}
           />
           <HomeScreen
             allData={this.state}
             goToNotificationCenter={() => this.setState({notificationCenter : true, lockScreen: false})}
+            openApp={(id) => {
+              this.setState({appID : id});
+              setTimeout(() => {this.setState({showAppContent: true})}, 300);
+            }}
           />
+
         </div>
       );
     }
@@ -74,6 +85,7 @@ class PhoneTen extends React.Component{
   }
 
   render(){
+    // console.log("this.state.appID : ", this.state.appID);
     return(
       <div id="phoneten" style={{background: this.state.darkUI ? '#404040' : '#BBB'}}>
         <div className="chassis">
@@ -92,6 +104,7 @@ class PhoneTen extends React.Component{
           </div>
           <div className="reseau"></div>
         </div>
+        {/*<div className="versionLabel" style={{color: this.state.darkUI ? '#BBB' : '#404040'}}>Version : {this.props.version}</div>*/}
       </div>
     );
   }

@@ -1,0 +1,16 @@
+.screen{
+  .notificationarea{
+    height: 354px;
+    width: 100%;
+    position: absolute;
+    top: 170px;
+    overflow: scroll;
+    p{
+      margin: 0;
+      padding: 0;
+      color: white;
+      text-align: center;
+      font-size: 12px;
+    }
+  }
+}

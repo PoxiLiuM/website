@@ -8,16 +8,11 @@ import './styles.scss';
 
 class HomeScreen extends React.Component{
 
-  constructor(props){
-    super(props);
-    this.state = this.props.allData;
-  }
-
   render(){
     return(
       <div className="homescreen">
         <TopBar date={this.props.allData.date} isNC={false} goToNC={this.props.goToNotificationCenter}/>
-        <Dock />
+        <Dock openApp={this.props.openApp} closeApp={this.props.closeApp}/>
       </div>
     )
   }
