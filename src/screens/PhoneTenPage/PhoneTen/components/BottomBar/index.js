@@ -22,7 +22,7 @@ class BottomBar extends React.Component{
   }
 
   render(){
-    if(this.props.lockscreen){
+    if(this.props.lockscreen && !this.props.lockScreenCamera){
       return(
         <div className="bottombar" onClick={() => this.props.onClickBottomBar()}>
           <p style={{opacity: this.state.textVisible ? 1 : 0, marginBottom: this.state.textVisible ? '15px' : '10px'}}>Cliquez dans cette zone pour ouvrir</p>

@@ -8,6 +8,8 @@ import BottomBar from '../../components/BottomBar';
 import TopBar from '../../components/TopBar';
 
 import Telephone from './AppLibrary/Telephone';
+import EmptyApp from './AppLibrary/EmptyApp';
+import Settings from './AppLibrary/Settings';
 
 class Application extends React.Component{
 
@@ -15,10 +17,12 @@ class Application extends React.Component{
     switch (appID) {
       case 1:
         return <Telephone />
+      case 4:
+        return <Settings />
       case 0:
       default:
         console.error("This application is undefined...");
-        return (<div></div>)
+        return (<EmptyApp />)
     }
   }
 

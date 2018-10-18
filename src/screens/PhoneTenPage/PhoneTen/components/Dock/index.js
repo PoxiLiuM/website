@@ -11,9 +11,9 @@ class Dock extends React.Component{
     return(
       <div className="dock">
         <AppIcone color="green" openApp={() => this.props.openApp(1) }/>
-        <AppIcone color="blue" openApp={() => this.props.openApp(0)}/>
-        <AppIcone color="white" openApp={() => this.props.openApp(0)}/>
-        <AppIcone color="red" openApp={() => this.props.openApp(0)}/>
+        <AppIcone color="blue" openApp={() => this.props.openApp(2)}/>
+        <AppIcone color="red" openApp={() => this.props.openApp(3)}/>
+        <AppIcone color="grey" openApp={() => this.props.openApp(4)}/>
       </div>
     )
   }

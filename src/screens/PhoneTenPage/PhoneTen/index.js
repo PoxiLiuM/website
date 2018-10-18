@@ -20,6 +20,7 @@ class PhoneTen extends React.Component{
       displayOn : true,
       notificationCenter : true,
       lockScreen : true,
+      showLockScreenCamera : false,
       overPowerButton: false,
       date : {
         minute : date.getMinutes(),
@@ -61,8 +62,13 @@ class PhoneTen extends React.Component{
           <LookScreen
             allData={this.state}
             torcheAction={() => this.setState({darkUI: !this.state.darkUI})}
-            photoAction={() => console.error("This button is not working...")}
-            onClickBottomBar={() => this.setState({notificationCenter: false, lockScreen: false})}
+            photoAction={() => this.setState({showLockScreenCamera: true})}
+            onClickBottomBar={() => {
+              if(this.state.showLockScreenCamera)
+                this.setState({showLockScreenCamera: false})
+              else
+                this.setState({notificationCenter: false, lockScreen: false})
+            }}
           />
           <Application
             allData={this.state}
