@@ -17,7 +17,7 @@ $border : 1px solid #EEE;
       bottom: 0;
       left: 10px;
       h1{
-        font-size: 20px;
+        font-size: 22px;
         margin: 0;
         padding: 0;
         color: #101010;
@@ -38,6 +38,81 @@ $border : 1px solid #EEE;
       }
       input::placeholder{
         color: #808080;
+      }
+    }
+  }
+  .inner{
+    width: 100%;
+    > section:nth-child(1){
+      > div{
+        display: flex;
+        align-items: center;
+        div:nth-child(1){
+          width: 40px;
+          height: 40px;
+          background: black;
+          border-radius: 50%;
+        }
+        div:nth-child(2){
+          width: calc(100% - 50px) !important;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          padding: 10px;
+          box-sizing: border-box;
+          color: #101010;
+          h1{
+            margin: 0;
+            padding: 0;
+            display: block;
+            font-size: 16px;
+            font-weight: normal;
+          }
+          p{
+            margin: 0;
+            padding: 0;
+            margin-top: 5px;
+            display: block;
+            font-size: 11px;
+          }
+        }
+      }
+    }
+    > section{
+      width: 100%;
+      margin-top: 26px;
+      padding: 3px 0 0px 10px;
+      background: white;
+      box-sizing: border-box;
+      border-top: $border;
+      border-bottom: $border;
+      .row{
+        display: flex;
+        align-items: center;
+        line-height: 30px;
+        cursor: pointer;
+        > div:nth-child(1){
+          height: 20px;
+          width: 20px;
+          min-width: 20px;
+          min-height: 20px;
+          border-radius: 4px;
+          margin-right: 10px;
+        }
+        > div:nth-child(2){
+          width: 100%;
+          font-size: 13px;
+          border-bottom: $border;
+          box-sizing: border-box;
+        }
+      }
+      .row:first-child{
+        margin-top: -1px;
+      }
+      .row:last-child{
+        > div:nth-child(2){
+          border-bottom: none;
+        }
       }
     }
   }
