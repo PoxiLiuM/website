@@ -21,6 +21,7 @@ class LookScreen extends React.Component{
             date={this.props.allData.date}
             notificationCenter={this.props.allData.notificationCenter}
             dark={this.props.allData.showLockScreenCamera}
+            hideBatterie={this.props.allData.hideBatterie}
           />
           <DateNow date={this.props.allData.date}/>
           <NotificationArea isLockScreen={this.props.allData.lockScreen} />
@@ -32,7 +33,7 @@ class LookScreen extends React.Component{
           <BottomBar
             lockScreenCamera={this.props.allData.showLockScreenCamera}
             lockscreen={this.props.allData.lockScreen}
-            onClickBottomBar={this.props.onClickBottomBar}
+            onClickBottomBar={() => this.props.onClickBottomBar()}
           />
         </div>
         <div>

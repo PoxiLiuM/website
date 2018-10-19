@@ -11,6 +11,7 @@ class Settings extends React.Component{
     const lightblue = "rgb(58, 172, 219)";
     const blue = "rgb(21, 127, 251)";
     const red = "rgb(250, 61, 58)";
+    const green = "rgb(81, 215, 105)";
 
     return(
       <div id="settings">
@@ -32,26 +33,68 @@ class Settings extends React.Component{
           </section>
           <section>
             <div className="row">
+              <div style={{background: green}}></div>
+              <div>
+                <span>{this.context.t('operateur')}</span>
+                <div>
+                  <span>{this.context.t('operateur_label')}</span>
+                  <span className="fleche"></span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section>
+            <div className="row">
               <div style={{background: red}}></div>
-              <div>{this.context.t('notifications')}</div>
+              <div>
+                <span>{this.context.t('notifications')}</span>
+                <div>
+                  <span></span>
+                  <span className="fleche"></span>
+                </div>
+              </div>
             </div>
             <div className="row">
               <div style={{background: grey}}></div>
-              <div>{this.context.t('controle_center')}</div>
+              <div>
+                <span>{this.context.t('controle_center')}</span>
+                <div>
+                  <span></span>
+                  <span className="fleche"></span>
+                </div>
+              </div>
             </div>
           </section>
           <section>
             <div className="row">
               <div style={{background: grey}}></div>
-              <div>{this.context.t('general')}</div>
+              <div>
+                <span>{this.context.t('general')}</span>
+                <div>
+                  <span></span>
+                  <span className="fleche"></span>
+                </div>
+              </div>
             </div>
             <div className="row">
               <div style={{background: lightblue}}></div>
-              <div>{this.context.t('background')}</div>
+              <div>
+                <span>{this.context.t('background')}</span>
+                <div>
+                  <span></span>
+                  <span className="fleche"></span>
+                </div>
+              </div>
             </div>
             <div className="row">
               <div style={{background: blue}}></div>
-              <div>{this.context.t('confidentialite')}</div>
+              <div>
+                <span>{this.context.t('confidentialite')}</span>
+                  <div>
+                    <span></span>
+                    <span className="fleche"></span>
+                  </div>
+              </div>
             </div>
           </section>
         </div>

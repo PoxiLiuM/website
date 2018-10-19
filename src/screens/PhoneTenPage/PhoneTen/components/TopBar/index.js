@@ -18,9 +18,9 @@ class TopBar extends React.Component{
           onClick={() => !this.props.notificationCenter ? this.props.goToNC() : ''}
           style={{cursor: !this.props.notificationCenter ? 'pointer' : 'initial', fontSize: !this.props.notificationCenter? '11px': '10px'}}
         >
-          {this.props.notificationCenter ? 'ASP' : this.getHours(this.props.date)}
+          {this.props.notificationCenter ? this.context.t('operateur_label') : this.getHours(this.props.date)}
         </span>
-        <span></span>
+        {_.get(this.props, 'hideBatterie', false) ? '' : <span></span>}
       </div>
     );
   }

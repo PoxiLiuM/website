@@ -2,7 +2,8 @@
   .lookscreen{
     background-image: url('../../images/fond-4.jpg');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 101% 101%;
+    background-position: center;
     position: absolute;
     transition: 500ms;
     z-index: 250;

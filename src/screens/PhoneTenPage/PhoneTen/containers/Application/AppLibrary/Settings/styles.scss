@@ -81,7 +81,7 @@ $border : 1px solid #EEE;
     > section{
       width: 100%;
       margin-top: 26px;
-      padding: 3px 0 0px 10px;
+      padding: 2px 0 1px 10px;
       background: white;
       box-sizing: border-box;
       border-top: $border;
@@ -90,6 +90,8 @@ $border : 1px solid #EEE;
         display: flex;
         align-items: center;
         line-height: 30px;
+        height: 30px;
+        box-sizing: border-box;
         cursor: pointer;
         > div:nth-child(1){
           height: 20px;
@@ -101,9 +103,44 @@ $border : 1px solid #EEE;
         }
         > div:nth-child(2){
           width: 100%;
+          margin-top: 1px;
+          padding-right: 10px;
           font-size: 13px;
           border-bottom: $border;
           box-sizing: border-box;
+          display: flex;
+          justify-content: space-between;
+          > div{
+            width: 90px;
+            position: relative;
+            text-align: right;
+            span:first-child{
+              position: absolute;
+              color: rgb(152, 153, 159);
+              right: 15px;
+            }
+            span.fleche{
+              top: 11px;
+              right: 1px;
+              position: absolute;
+              height: 1px;
+              width: 7px;
+              background: rgb(198, 198, 204);
+              display: inline-block;
+              transform: rotate(45deg);
+            }
+            span.fleche::after{
+              top: 3px;
+              right: -3px;
+              position: absolute;
+              height: 1px;
+              width: 7px;
+              background: rgb(198, 198, 204);
+              display: inline-block;
+              transform: rotate(90deg);
+              content:'';
+            }
+          }
         }
       }
       .row:first-child{

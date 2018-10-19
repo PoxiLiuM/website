@@ -9,7 +9,7 @@ class PhoneTenPage extends React.Component{
   constructor(props){
     super(props);
     this.state = {
-      version : "0.3.0"
+      version : "0.3.1"
     }
   }
 
