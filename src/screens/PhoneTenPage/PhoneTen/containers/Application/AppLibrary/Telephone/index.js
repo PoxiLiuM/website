@@ -18,7 +18,32 @@ class Telephone extends React.Component{
             <span><p>{' e-mail'}</p></span>
           </div>
         </div>
-        <div className="inner"></div>
+        <div className="inner">
+          <section>
+            <div className="row">
+              <p>{this.context.t('portable')}</p>
+              <p>{this.context.t('portable_value')}</p>
+            </div>
+          </section>
+          <section>
+            <div className="row">
+              <p>{this.context.t('email_office')}</p>
+              <p>{this.context.t('email_value')}</p>
+            </div>
+          </section>
+          <section>
+            <div className="row">
+              <p>{this.context.t('domicile')}</p>
+              <p>{this.context.t('domicile_value')}</p>
+            </div>
+          </section>
+          <section>
+            <div className="row">
+              <p>{this.context.t('anniversaire')}</p>
+              <p>{this.context.t('anniversaire_value')}</p>
+            </div>
+          </section>
+        </div>
         <div className="footer"></div>
       </div>
     );

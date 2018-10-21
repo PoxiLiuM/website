@@ -18,7 +18,8 @@
       transition: 1500ms;
     }
     > div{
-      height: 3px;
+      max-height: 3px;
+      min-height: 3px;
       width: 80px !important;
       border-radius: 2px;
       background: white;

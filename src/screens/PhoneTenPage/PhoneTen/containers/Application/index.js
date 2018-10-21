@@ -10,6 +10,7 @@ import TopBar from '../../components/TopBar';
 import Telephone from './AppLibrary/Telephone';
 import EmptyApp from './AppLibrary/EmptyApp';
 import Settings from './AppLibrary/Settings';
+import Mail from './AppLibrary/Mail'
 
 class Application extends React.Component{
 
@@ -17,6 +18,8 @@ class Application extends React.Component{
     switch (appID) {
       case 1:
         return <Telephone />
+      case 2:
+        return <Mail />
       case 4:
         return <Settings />
       case 0:
